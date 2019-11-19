@@ -32,7 +32,7 @@ public class StringBackendControllerTest {
 
     @Test
     public void palindrome() {
-        String example = "sadaadas";
+        String example = "sadadas";
         Boolean result = stringBackendController.palindrome(example);
         assertEquals(result, true);
     }

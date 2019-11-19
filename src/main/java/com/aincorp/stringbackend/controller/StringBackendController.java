@@ -2,6 +2,7 @@ package com.aincorp.stringbackend.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -14,11 +15,13 @@ import static java.util.Comparator.comparingInt;
 public class StringBackendController {
 
     @RequestMapping("/reverse")
+    @ResponseBody
     public String reverse(@RequestParam(value = "stringParam") String stringParam) {
         return new StringBuilder(stringParam).reverse().toString();
     }
 
     @RequestMapping("/palindrome")
+    @ResponseBody
     public Boolean palindrome(@RequestParam(value = "stringParam") String stringParam) {
 
         int n = stringParam.length();
@@ -33,6 +36,7 @@ public class StringBackendController {
     }
 
     @RequestMapping("/substring")
+    @ResponseBody
     public String substring(@RequestParam(value = "stringParam") String stringParam) {
 
         List<String> variants = new ArrayList<>();

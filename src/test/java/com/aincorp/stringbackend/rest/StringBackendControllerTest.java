@@ -1,4 +1,4 @@
-package com.aincorp.stringbackend.controller;
+package com.aincorp.stringbackend.rest;
 
 import org.junit.After;
 import org.junit.Before;
